@@ -11,13 +11,14 @@ define [], ->
 	# overwrite jquery core fadein function
 	oEventFadeIn = jQuery.fn.fadeIn
 	jQuery.fn.fadeIn = ->
-		console.log arguments
 		$(@).show()
+		arguments[1].apply() if arguments[1]?
 		return
 	# overwrite jquery core fadeout function
 	oEventFadeOut = jQuery.fn.fadeOut
 	jQuery.fn.fadeOut = ->
 		$(@).hide()
+		arguments[1].apply() if arguments[1]?
 		return
 	return
 

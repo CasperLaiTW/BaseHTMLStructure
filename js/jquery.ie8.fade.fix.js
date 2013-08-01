@@ -8,12 +8,17 @@
     }
     oEventFadeIn = jQuery.fn.fadeIn;
     jQuery.fn.fadeIn = function() {
-      console.log(arguments);
       $(this).show();
+      if (arguments[1] != null) {
+        arguments[1].apply();
+      }
     };
     oEventFadeOut = jQuery.fn.fadeOut;
     jQuery.fn.fadeOut = function() {
       $(this).hide();
+      if (arguments[1] != null) {
+        arguments[1].apply();
+      }
     };
   });
 
