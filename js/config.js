@@ -2,18 +2,15 @@
 (function() {
   require.config({
     paths: {
-      urlArgs: "bust=" + (new Date()).getTime(),
       baseUrl: '.',
       jquery: '../libs/jquery/jquery.min',
       ie8fadefix: 'jquery.ie8.fade.fix'
     },
     shim: {
       ie8fadefix: {
-        deps: ['!jquery']
+        deps: ['jquery']
       }
     }
   });
-
-  require(['iefix'], function() {});
 
 }).call(this);

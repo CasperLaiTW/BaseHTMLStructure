@@ -12,8 +12,7 @@ require.config(
 		ie8fadefix: 'jquery.ie8.fade.fix'
 	shim:
 		ie8fadefix:
-			deps: ['!jquery']
+			deps: ['jquery']
 );
 
 
-require ['iefix'], ->
